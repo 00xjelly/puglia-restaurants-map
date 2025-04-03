@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+}
+
+header {
+    background-color: #0a3d62;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+}
+
+select, button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #f1c40f;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f39c12;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#map {
+    flex: 1;
+    min-height: 400px;
+}
+
+#sidebar {
+    width: 400px;
+    background-color: white;
+    overflow-y: auto;
+    border-left: 1px solid #ddd;
+}
+
+#restaurant-list, #restaurant-details {
+    padding: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.restaurant-item {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.restaurant-item:hover {
+    background-color: #f5f5f5;
+}
+
+.restaurant-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.restaurant-city {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+#back-to-list {
+    background-color: transparent;
+    color: #0a3d62;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.detail-city {
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+#detail-actions {
+    margin-top: 2rem;
+}
+
+#detail-actions a {
+    display: inline-block;
+    background-color: #0a3d62;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+#detail-actions a:hover {
+    background-color: #145a8d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    #sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
