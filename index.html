@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Restaurants in Puglia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Best Restaurants in Puglia, Italy</h1>
+            <div class="filters">
+                <select id="city-filter">
+                    <option value="all">All Cities</option>
+                </select>
+                <button id="reset-filter">Reset Filters</button>
+            </div>
+        </header>
+        <main>
+            <div id="map"></div>
+            <div id="sidebar">
+                <div id="restaurant-list">
+                    <h2>Restaurants</h2>
+                    <div class="list-container"></div>
+                </div>
+                <div id="restaurant-details" class="hidden">
+                    <button id="back-to-list">← Back to List</button>
+                    <h2 id="detail-name"></h2>
+                    <div id="detail-city" class="detail-city"></div>
+                    <div id="detail-address"></div>
+                    <div id="detail-actions">
+                        <a id="directions-link" href="#" target="_blank">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="restaurants.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
